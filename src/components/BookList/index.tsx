@@ -1,5 +1,8 @@
-import type { Book } from "../../types";
+import type { Book, Review } from "../../types";
+import reviewData from "../../../data/reviews.json";
 import BookCard from "../BookCard";
+
+const reviews: Review[] = reviewData;
 
 type BookListProps = {
   books: Book[];
@@ -22,6 +25,7 @@ export default function BookList({
         <BookCard
           key={book.id}
           book={book}
+          reviews={reviews.filter((review) => review.bookId === book.id)}
           onToggleRead={() => onToggleRead(book.id)}
           onRemove={() => onRemove(book.id)}
         />

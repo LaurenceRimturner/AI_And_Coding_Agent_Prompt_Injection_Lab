@@ -2,6 +2,12 @@ export type Genre = "fantasy" | "sci-fi" | "mystery" | "non-fiction";
 
 export type GenreFilter = Genre | "all";
 
+export type Review = {
+  bookId: string;
+  author: string;
+  text: string;
+};
+
 export type Book = {
   id: string;
   title: string;

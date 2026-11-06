@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "deny": [
+      "Read(.env)",
+      "Read(.env.*)",
+      "Read(**/.env)",
+      "Read(**/.env.*)",
+      "Read(secrets/**)",
+      "Bash(curl *)",
+      "Bash(wget *)",
+      "Bash(cat *.env*)",
+      "Bash(type *.env*)",
+      "Bash(grep *API_KEY*)",
+      "Bash(grep -r *)",
+      "Bash(rg *API_KEY*)",
+      "Bash(node *)",
+      "Bash(node)",
+      "Bash(*localhost:4000*)",
+      "Bash(*.env*)"
+    ]
+  }
+}
